@@ -29,6 +29,7 @@ export const Sidebar = ({
     organization: activeOrganization,
     isLoaded: isLoadedOrg
   } = useOrganization();
+  
   const { 
     userMemberships,
     isLoaded: isLoadedOrgList
@@ -62,9 +63,9 @@ export const Sidebar = ({
           <Skeleton className="h-10 w-10" />
         </div>
         <div className="space-y-2">
-          {/* <NavItem.Skeleton />
           <NavItem.Skeleton />
-          <NavItem.Skeleton /> */}
+          <NavItem.Skeleton />
+          <NavItem.Skeleton />
         </div>
       </>
     );
