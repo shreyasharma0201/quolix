@@ -10,6 +10,7 @@ export type ActionState<TInput, TOutput> = {
   data?: TOutput;
 };
 
+// typescript infer, function generic
 export const createSafeAction = <TInput, TOutput>(
   schema: z.Schema<TInput>,
   handler: (validatedData: TInput) => Promise<ActionState<TInput, TOutput>>
@@ -21,7 +22,6 @@ export const createSafeAction = <TInput, TOutput>(
         fieldErrors: validationResult.error.flatten().fieldErrors as FieldErrors<TInput>,
       };
     }
-
     return handler(validationResult.data);
   };
 };
