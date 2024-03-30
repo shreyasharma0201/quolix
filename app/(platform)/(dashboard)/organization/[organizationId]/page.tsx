@@ -1,35 +1,18 @@
-import { createBoard } from "@/actions/create-board";
-import { Button } from "@/components/ui/button";
-import { db } from "@/lib/db";
+import {Info} from "./_components/info"
+import { Separator } from "@/components/ui/separator";
+import { BoardList } from "./_components/board-list";
 
 const OrganizationIdPage = async () => {
 
-    const boards = await db.board.findMany();
     return (
-        <div className="flex flex-col space-y-4">
-            <form>
-                <input 
-                    id="title"
-                    name="title"
-                    required
-                    placeholder="Enter a board title"
-                    className="border-black border p-1"    
-                />
-                <Button type="submit">
-                    Submit
-                </Button>
-            </form>
-            <div className="space-y-2">
-                {boards.map((board) => (
-                    <div key={board.id}>
-                        Board name: {board.title} 
-                    </div>
-                ))}
+        <div>
+            <Info/>
+            <Separator className="my-4" />
+            <div className="px-2 md:px-4">
+                <BoardList />
             </div>
         </div>
     )
 };
-
-
 
 export default OrganizationIdPage;
