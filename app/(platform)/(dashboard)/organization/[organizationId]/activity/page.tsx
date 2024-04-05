@@ -9,7 +9,7 @@ import { ActivityList } from "./_components/activity-list";
 const ActivityPage = () => {
   return (
     <div className="w-full">
-      <Info />
+      <Info isPro={false} />
       <Separator className="my-2" />
       <Suspense fallback={<ActivityList.Skeleton />}>
         <ActivityList />
