@@ -55,6 +55,9 @@ export const Description = ({
       queryClient.invalidateQueries({
         queryKey: ["card", data.id],
       });
+      queryClient.invalidateQueries({
+        queryKey: ["card-logs", data.id],
+      });
       toast.success(`Card "${data.title}" updated`);
       disableEditing();
     },
@@ -113,12 +116,14 @@ export const Description = ({
           </form>
         ) : (
           <div
-            onClick={enableEditing}
-            role="button"
-            className="min-h-[78px] bg-neutral-200 text-sm font-medium py-3 px-3.5 rounded-md"
-          >
-            {data.description || "Add a more detailed description..."}
-          </div>
+          onClick={enableEditing}
+          role="button"
+          className="min-h-[78px] max-h-[120px] bg-neutral-200 text-sm font-medium py-3 px-3.5 rounded-md overflow-y-auto overflow-x-hidden"
+          style={{ overflowWrap: "break-word" }}
+        >
+          {data.description || "Add a more detailed description..."}
+        </div>
+
         )}
       </div>
     </div>
