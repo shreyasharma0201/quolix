@@ -1,3 +1,3 @@
 ### Get Ready for next thing coming up....
-### Building a whole project from scratch to advanced real life app.
-### Improving Quolix with Team real time collarboration.
+### Building project from scratch to advanced real life app.
+### Working on real time collaboration.
