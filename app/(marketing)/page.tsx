@@ -3,7 +3,7 @@ import localFont from "next/font/local";
 import { Poppins } from "next/font/google";
 import { Medal } from "lucide-react";
 
-import {cn} from '@/lib/utils'; // cn merges the classes together
+import { cn } from '@/lib/utils'; // cn merges the classes together
 import { Button } from "@/components/ui/button";
 
 const headingFont = localFont({
@@ -11,7 +11,7 @@ const headingFont = localFont({
 });
 
 const textFont = Poppins({
-    subsets: ["latin"], 
+    subsets: ["latin"],
     weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"]
 });
 
@@ -28,12 +28,12 @@ const MarketingPage = () => {
                     Quolix helps Streamline Your Workflow,
                 </h1>
                 <div className="text-3xl md:text-6xl bg-gradient-to-r from-sea-green to-green-600 text-white px-4 py-2 rounded-lg">
-    Simplify Your Life
-</div>
+                    Simplify Your Task
+                </div>
             </div>
-            <div className={cn("text-sm md:text-xl text-neutral-400 mt-4 max-w-xs md:max-w-2xl text-center mx-auto", 
-            textFont.className)}>
-            Revolutionize team collaboration by providing a seamless, intuitive, and customizable platform that empowers users to efficiently manage projects, communicate effectively, and achieve their goals effortlessly.
+            <div className={cn("text-sm md:text-xl text-neutral-400 mt-4 max-w-xs md:max-w-2xl text-center mx-auto",
+                textFont.className)}>
+                Revolutionize team collaboration by providing a seamless, intuitive, and customizable platform that empowers users to efficiently manage projects, communicate effectively, and achieve their goals effortlessly.
             </div>
             <Button className="mt-6" size="lg" asChild>
                 <Link href="/sign-up">
