@@ -1,3 +1,1 @@
-### Get Ready for next thing coming up....
-### Building project from scratch to advanced real life app.
-### Working on real time collaboration.
+
